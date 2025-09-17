@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1758070478483" clover="3.2.0">
-  <project timestamp="1758070478484" name="All files">
+<coverage generated="1758072764090" clover="3.2.0">
+  <project timestamp="1758072764090" name="All files">
     <metrics statements="47" coveredstatements="47" conditionals="12" coveredconditionals="12" methods="8" coveredmethods="8" elements="67" coveredelements="67" complexity="0" loc="47" ncloc="47" packages="1" files="1" classes="1"/>
     <file name="trade-module.ts" path="C:\Users\ADMIN\Desktop\Workspace\trade-demo-js\trade-module.ts">
       <metrics statements="47" coveredstatements="47" conditionals="12" coveredconditionals="12" methods="8" coveredmethods="8"/>

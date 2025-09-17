@@ -1,0 +1,145 @@
+{
+	"info": {
+		"_postman_id": "98c4623d-afd0-4cce-bfb7-d23fbb0a4ebd",
+		"name": "APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31100090"
+	},
+	"item": [
+		{
+			"name": "pnlReport",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/profitandlossreport",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"profitandlossreport"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/health",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "portfolio",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/portfolio",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"portfolio"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addTrade1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"buy-btc-1\",\r\n  \"symbol\": \"BTC\",\r\n  \"side\": \"BUY\",\r\n  \"price\": 40000,\r\n  \"quantity\": 1,\r\n  \"timestamp\": 1718000000\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/trade",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"trade"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addTrade2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"buy-btc-2\",\r\n  \"symbol\": \"BTC\",\r\n  \"side\": \"BUY\",\r\n  \"price\": 42000,\r\n  \"quantity\": 1,\r\n  \"timestamp\": 1718000001\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/trade",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"trade"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addTrade3",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"sell-btc-1\",\r\n  \"symbol\": \"BTC\",\r\n  \"side\": \"SELL\",\r\n  \"price\": 43000,\r\n  \"quantity\": 1,\r\n  \"timestamp\": 1718000002\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/trade",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"trade"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

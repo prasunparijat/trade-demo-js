@@ -1,20 +1,20 @@
 // Assume a single user + in memory + no auth + FIFO
 // User is Prasun
-const USER = 'Prasun';
+export const USER = 'Prasun';
 // Supported symbols
-var Symbol;
+export var Symbol;
 (function (Symbol) {
     Symbol["BTC"] = "BTC";
     Symbol["ETH"] = "ETH";
 })(Symbol || (Symbol = {}));
 // Supported Sides
-var Side;
+export var Side;
 (function (Side) {
     Side["BUY"] = "BUY";
     Side["SELL"] = "SELL";
 })(Side || (Side = {}));
 // In-memory instance for all trades for the user
-const AllTrades = {
+export const AllTrades = {
     [Symbol.BTC]: {
         [Side.BUY]: [],
         [Side.SELL]: [],
@@ -25,7 +25,7 @@ const AllTrades = {
     },
 };
 // Initialise portfolio with default of 0 BTC and ETH
-const Portfolio = new Map([
+export const Portfolio = new Map([
     [
         Symbol.BTC,
         { quantity: 0, averagePurchasePriceUSDT: 0, realizedReturnUSDT: 0 },
@@ -36,6 +36,8 @@ const Portfolio = new Map([
     ],
 ]);
 function isValidTrade(trade) {
+    if (trade.quantity <= 0)
+        return false;
     switch (trade.side) {
         case Side.BUY:
             return true; // Assuming user can always buy (has enough USDT)
@@ -71,7 +73,7 @@ function ExecuteTrade(trade) {
             break;
     }
 }
-const CurrentMarketPrices = {
+export const CurrentMarketPrices = {
     [Symbol.BTC]: 44000,
     [Symbol.ETH]: 2000,
 };
@@ -81,6 +83,7 @@ export function AddTrade(trade) {
     if (!isValidTrade(trade))
         return 'Trade is invalid';
     ExecuteTrade(trade);
+    return 'Trade executed successfully';
 }
 export function GetPortFolio() {
     return Object.fromEntries(Portfolio);
@@ -104,5 +107,21 @@ export function GetProfitAndLossReport() {
         });
     }
     return Report;
+}
+export function ResetPortfolio() {
+    Portfolio.set(Symbol.BTC, {
+        quantity: 0,
+        averagePurchasePriceUSDT: 0,
+        realizedReturnUSDT: 0,
+    });
+    Portfolio.set(Symbol.ETH, {
+        quantity: 0,
+        averagePurchasePriceUSDT: 0,
+        realizedReturnUSDT: 0,
+    });
+    AllTrades[Symbol.BTC][Side.BUY] = [];
+    AllTrades[Symbol.BTC][Side.SELL] = [];
+    AllTrades[Symbol.ETH][Side.BUY] = [];
+    AllTrades[Symbol.ETH][Side.SELL] = [];
 }
 //# sourceMappingURL=trade-module.js.map
