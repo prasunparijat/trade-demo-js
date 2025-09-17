@@ -1,0 +1,23 @@
+{
+  "name": "trade-demo-js",
+  "version": "1.0.0",
+  "description": "A backend service for demo trades",
+  "license": "ISC",
+  "author": "Prasun",
+  "type": "module",
+  "main": "dist/service.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "npm run build && node dist/service.js",
+    "test": "npx jest --coverage"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "@types/express": "^5.0.3",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^24.5.0",
+    "ts-jest": "^29.4.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  }
+}
