@@ -37,4 +37,4 @@ Pre-Requisites : `NodeJs` and a package manager like `npm` installed on the syst
 1. Folder structure - `src/` directory to contain all the relevant code.
 2. More than 1 user capability
 3. Usage of a more mature framework like nestjs and use the native
-4. Use `.gitignore` and environment variables
+4. Use environment variables
