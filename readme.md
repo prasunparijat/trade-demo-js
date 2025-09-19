@@ -3,6 +3,8 @@
 - Trade server written in TS, tested by JEST, having the capability to add trades, get the portfolio and the profit&loss report.
 - This is just a demo project - Assumes only one user for simplicity.
 
+- Note: The service uses the Average Cost to calculate the unrealised and realised returns.
+
 ## How Run the backend service :
 
 Pre-Requisites : `NodeJs` and a package manager like `npm` installed on the system. If not, this would be a good time to do the same.
