@@ -36,7 +36,7 @@ Pre-Requisites : `NodeJs` and a package manager like `npm` installed on the syst
 
 ## Further Improvements :
 
-1. Folder structure - `src/` directory to contain all the relevant code.
-2. More than 1 user capability
-3. Usage of a more mature framework like nestjs and use the native
-4. Use environment variables
+1. More than 1 user capability
+2. Usage of a more mature framework like nestjs and use the native class-validator for better validations and pipes or transports
+3. Use environment variables
+4. Monitoring can be used
